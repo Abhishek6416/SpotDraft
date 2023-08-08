@@ -6,8 +6,8 @@ const port = 3000;
 
 // Replace these with your actual API keys
 const ASANA_ACCESS_TOKEN = 'YOUR_ASANA_ACCESS_TOKEN';
-const AIRTABLE_API_KEY = 'YOUR_AIRTABLE_API_KEY';
-const AIRTABLE_BASE_ID = 'YOUR_AIRTABLE_BASE_ID';
+const AIRTABLE_API_KEY = 'patFimeT7PDgxHcOU.7519ede3091141c3a8c092b881385604348a28cc0f1253469480925ab1327b4a';
+const AIRTABLE_BASE_ID = 'app44nyhwRkvn0gnU';
 
 app.use(express.json());
 
@@ -37,7 +37,7 @@ async function copyTaskToAirtable(asanaTask) {
     'Description': asanaTask.notes || null,
   };
 
-  const airtableEndpoint = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Asana%20Tasks`;
+  const airtableEndpoint = `https://api.airtable.com/v0/${app44nyhwRkvn0gnU}/Asana%20Tasks`;
   const airtableHeaders = {
     'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
     'Content-Type': 'application/json',
